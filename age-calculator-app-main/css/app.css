@@ -9,10 +9,15 @@ body{
     margin:0 auto;
     background-color: #F0F0F0;
     font-family: "Poppins", sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper{
-    margin: 171px auto 109px auto;
+    /* margin: 171px auto 109px auto; */
+    margin-top: 170px;
     width: 840px;
     /* height: 680px; */
     background-color: white;
@@ -118,7 +123,7 @@ hr{
 @media screen and (max-width: 768px) {
 
     .wrapper{
-        margin: 15px auto;
+        margin-top: 88px;
         width: 343px;
         height: 486px;
         padding: 24px;
