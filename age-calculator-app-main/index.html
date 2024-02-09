@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="inputs">
+        <div class="input-group">
+          <h5 id="day-label" class="label">Day</h5>
+          <input name="day" class="input" type="number" placeholder="DD" />
+          <p id="day-error" class="error">Must be a valid day</p>
+        </div>
+
+        <div class="input-group">
+          <h5 id="month-label" class="label">Month</h5>
+          <input name="month" class="input" type="number" placeholder="MM" />
+          <p id="month-error" class="error">Must be a valid month</p>
+        </div>
+
+        <div class="input-group">
+          <h5 id="year-label" class="label">Year</h5>
+          <input name="year" class="input" type="number" placeholder="YYYY" />
+          <p id="year-error" class="error">Must be in the past</p>
+        </div>
+      </section>
+
+      <button onclick="validate()" id="">Submit</button>
+
+      <section class="displays">
+        <p class="display"><span class="number" id="years-display">--</span> years</p>
+        <p class="display"><span class="number" id="months-display">--</span> months</p>
+        <p class="display"><span class="number" id="days-display">--</span> days</p>
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
