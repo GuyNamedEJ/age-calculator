@@ -14,7 +14,7 @@ body{
 .wrapper{
     margin: 171px auto 109px auto;
     width: 840px;
-    height: 680px;
+    /* height: 680px; */
     background-color: white;
     border-radius: 24px 24px 200px 24px;
     padding: 56px;
@@ -85,16 +85,49 @@ input[type=number]:focus {
     font-style: italic;
 }
 
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #854DFF;
+    border-radius: 50%;
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    right: 0;
+    transition: background-color .2s ease-out ;
+}
+
+.button:hover{
+    background-color: black;
+}
+
+.divider{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin:50px auto;
+}
+
+hr{
+    width: 100%;
+}
 
 @media screen and (max-width: 768px) {
 
     .wrapper{
+        margin: 15px auto;
         width: 343px;
+        height: 486px;
         padding: 24px;
     }
     
     .display{
-        font-size: 56px;
+        font-size: 52px;
+        line-height: 110%;
+        letter-spacing: -2%;
     }
 
     .input{
@@ -115,4 +148,12 @@ input[type=number]:focus {
     .error{
         font-size: 8px;
     }
+
+    .button{
+        width: 64px;
+        height: 64px;
+        right: unset;
+    }
+
+
 }
