@@ -1,3 +1,6 @@
+import { CountUp } from './countUp.min.js';
+
+
 let dayInput = document.querySelector('input[name=day]')
 let monthInput = document.querySelector('input[name=month]')
 let yearInput = document.querySelector('input[name=year]')
@@ -6,6 +9,8 @@ let dayDisplay = document.querySelector('#days-display')
 let yearsDisplay = document.querySelector('#years-display')
 let monthsDisplay = document.querySelector('#months-display')
 
+let button = document.querySelector('#button')
+
 let birthDay;
 let birthMonth;
 let birthYear;
@@ -13,6 +18,8 @@ let birthYear;
 let isValid;
 
 let currDate = new Date()
+
+button.addEventListener('click', validate)
 
 dayInput.addEventListener('input', () => {
     birthDay = dayInput.value
@@ -83,6 +90,9 @@ function calcAge() {
     let month;
     let prevMonthDays;
     let prevMonth;
+    let prevYears = 0;
+
+    
 
     years = currYear - birthYear
 
@@ -147,10 +157,19 @@ function calcAge() {
     else{
         day = currDay - birthDay
     }
+ 
 
-    yearsDisplay.innerHTML = years
-    monthsDisplay.innerHTML = month
-    dayDisplay.innerHTML = day
-    
+    //console.log("Prev Years: " + prevYears)
+    let yearCounter = new CountUp('years-display', years)
+
+    let monthCounter = new CountUp('months-display', month)
+    let dayCounter = new CountUp('days-display', day)
+
+    yearCounter.start()
+    monthCounter.start()
+    dayCounter.start()    
 }
 
+
+
+export {validate as validate}
